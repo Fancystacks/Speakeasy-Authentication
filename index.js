@@ -29,10 +29,10 @@ app.post('/api/register', (req, res) => {
 
 // verify secret, make secret premanent 
 app.post('/api/verify', (req, res) => {
-    const {token, userId} = req.body
+    const { token, userId } = req.body;
 
     try {
-        const path = `/user/${id}`;
+        const path = `/user/${userId}`;
         const user = db.getData(path);
 
         const { base32: secret } = user.temp_secret
@@ -53,6 +53,8 @@ app.post('/api/verify', (req, res) => {
         res.status(500).json({ message: 'Error finding the user'});
     }
 });
+
+
 
 app.get('/api', (req, res) => res.json({ message: ' Welcome to the two-factor authentication example'}));
 
