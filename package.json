@@ -1,0 +1,23 @@
+{
+  "name": "Speakeasy-Authentication",
+  "version": "1.0.0",
+  "description": "Time-Based One-Time password Node &amp; Speakeasy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fancystacks/Speakeasy-Authentication.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fancystacks/Speakeasy-Authentication/issues"
+  },
+  "homepage": "https://github.com/Fancystacks/Speakeasy-Authentication#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
