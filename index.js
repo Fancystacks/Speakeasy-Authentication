@@ -54,7 +54,32 @@ app.post('/api/verify', (req, res) => {
     }
 });
 
+// validate token
+app.post('/api/validate', (req, res) => {
+    const { token, userId } = req.body;
 
+    try {
+        const path = `/user/${userId}`;
+        const user = db.getData(path);
+
+        const { base32: secret } = user.secret
+
+        const tokenValidate = speakeasy.totp.verify({ secret,
+            encoding: 'base32',
+            token, window: 1 });
+
+        if(tokenValidate) {
+            db.push(path, { id: userId, secret: user.temp_secret })
+            res.json({ validated: true });
+        } else {
+            res.json({ validated: false });
+        }
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Error finding the user'});
+    }
+});
 
 app.get('/api', (req, res) => res.json({ message: ' Welcome to the two-factor authentication example'}));
 
