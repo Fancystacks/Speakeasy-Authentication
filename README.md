@@ -12,13 +12,15 @@
 
 Use `nodemon index.js` to start
 
-The library
+The library json DB will auto-generate an empty folder once imported
 
 <img src="https://user-images.githubusercontent.com/38336934/104986589-930b6800-59d0-11eb-8143-b94f0b342cf8.png" width="500" height="370">
 
-Join a chat to see other current users and messages in the room.
+## Register a User:
 
-## Peer-to-Peer Messaging:
+### Use Postman POST route to `/api/register` to register a user
+
+- id and secret will be generated as an object
 
 <img src="https://user-images.githubusercontent.com/38336934/104986591-94d52b80-59d0-11eb-9a74-a9e3263db057.png"  width="270" height="350">
 
