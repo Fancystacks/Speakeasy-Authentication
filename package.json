@@ -4,6 +4,7 @@
   "description": "Time-Based One-Time password Node &amp; Speakeasy",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,8 @@
     "node-json-db": "^1.1.0",
     "speakeasy": "^2.0.0",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
